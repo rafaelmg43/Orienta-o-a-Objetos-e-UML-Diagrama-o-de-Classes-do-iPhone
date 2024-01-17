@@ -1,6 +1,9 @@
 # Orienta-o-a-Objetos-e-UML-Diagrama-o-de-Classes-do-iPhone
 Projeto: Diagrama de Classes do Dispositivo Móvel (iPhone) - DIO Neste projeto, aplicamos conceitos de análise de negócios, requisitos, programação orientada a objetos e modelagem UML para criar um diagrama de classes representando os principais papéis de um dispositivo móvel, inspirado no lançamento do iPhone em 2017.
 
+![image](https://github.com/rafaelmg43/Orienta-o-a-Objetos-e-UML-Diagrama-o-de-Classes-do-iPhone/assets/88958960/fd4f0e90-290b-4ab7-bc95-333d117a2928)
+
+
 Descrição das Interfaces e Classes
 
 Reprodutor Musical (ReprodutorMusical)
