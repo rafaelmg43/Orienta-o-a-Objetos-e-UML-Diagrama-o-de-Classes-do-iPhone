@@ -1,0 +1,80 @@
+@startuml
+title Diagrama de Classes do Dispositivo Móvel
+
+skinparam classAttributeIconSize 0
+
+interface "ReprodutorMusical" as ReprodutorMusical {
+  -musicas: Musica[]
+  +tocar(): void
+  +pausar(): void
+  +selecionarMusica(): void
+}
+
+class AparelhoTelefonico {
+  -contatos: Contato[]
+  -redeMovelDisponivel(): Boolean
+  +ligar(): void
+  +atender(): void
+  +iniciarCorreioVoz(): void
+}
+
+class Musica {
+  nome: String
+  caminho: String
+}
+
+class Contato {
+  nome: String
+  numero: String
+}
+
+interface "Navegador" as Navegador {
+  -conexaoComInternet(): Boolean
+  +exibirPagina(): void
+  +adicionarNovaAba(): void
+  +atualizarPagina(): void
+}
+
+note top of ReprodutorMusical
+  Interface encarregada de implementar
+  a funcionalidade de reprodução de 
+  arquivos de áudio.
+end note
+
+note top of AparelhoTelefonico
+  Interface encarregada de implementar
+  a funcionalidade de um telefone.
+end note
+
+note top of Musica
+  Classe responsável por 
+  armazenar informações 
+  das músicas.
+end note
+
+note top of Contato
+  Classe responsável por 
+  armazenar informações 
+  de contato.
+end note
+
+note top of Navegador
+  Interface encarregada
+  de implementar
+  a funcionalidade 
+  de um navegador.
+end note
+
+DispositivoMovel --> Telefone
+DispositivoMovel --> Navegador
+DispositivoMovel --> AplicativoMusica
+DispositivoMovel --> ReprodutorMusica
+DispositivoMovel --> Navegador
+
+ReprodutorMusica --o Musica
+AparelhoTelefonico <-- FeaturePhone
+AparelhoTelefonico <-- Smartphone
+AparelhoTelefonico --o Contato
+
+Navegador <-- Navegador
+@enduml
